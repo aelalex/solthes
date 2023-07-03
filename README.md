@@ -17,7 +17,7 @@ Also, the program includes a parametric analysis for the collector area $A$ and 
 
 Furthermore, the control for the typical solar thermal system is seen in Fig. 2. The circuit for the solar collector opens or closes depending on the environmental conditions and the available heat that it can provide to the storage tank. Similarly, when the available heat from the storage tank to the load is enough, then the load circuit opens and it covers the load. Extra controls include the check for the stagnation and maximum temperature in the collector circuit. For more information on the model and the control of the solar thermal system, please check [1].
 
-![flow chart of the code](figs/flow_chart.png)
+![flow chart of the code](figs/Flow_chart.png)
 
 Figure 2: The flow chart of SOLTHES
 
