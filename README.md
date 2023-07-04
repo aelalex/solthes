@@ -31,7 +31,7 @@ The software has been tested on MATLAB® '9.4.0.813654 (R2018a), however it is p
 ### Input Data
 
 The input data include:
--   Collector: $(\tau\alpha)_{eff}$, heat transfer coefficient $U$ in $\text{W/(m}^2 \text{K})$, $F_{R}, $slope $\beta$,
+-   Collector: heat transfer coefficient $U$ in $\text{W/(m}^2 \text{K})$, $\tau\alpha_{eff}$, $F_{R}$, slope $\beta$,
     surface azimuth angle $\gamma$, diffuse reflectance ${{\rho }_{r}}$.
 
 -   Storage: heat transfer coefficient $U_{st}$ in $\text{W/(m}^2 \text{K})$, length to
