@@ -31,22 +31,21 @@ The software has been tested on MATLAB® '9.4.0.813654 (R2018a), however it is p
 ### Input Data
 
 The input data include:
--   Collector: ${{\left( \tau \alpha  \right)}_{eff}}$, heat transfer coefficient $U$
-    in $\text{W/(m}^2 \text{K})$,${{F}_{R}}$, slope $\beta$,
+-   Collector: heat transfer coefficient $U$ in $\text{W/(m}^2 \text{K})$, $\tau\alpha_{eff}$, $F_{R}$, slope $\beta$,
     surface azimuth angle $\gamma$, diffuse reflectance ${{\rho }_{r}}$.
 
--   Storage: heat transfer coefficient ${{U}_{st}}$ in $\text{W/(m}^2 \text{K})$, length to
-    diameter ratio ${{{L}_{st}}}/{{{R}_{st}}}$, initial 
-    ${{T}_{st,initial}}\ $ and maximum temperatures ${{T}_{st,\max }}\ $ in  $\text{K}$.
+-   Storage: heat transfer coefficient $U_{st}$ in $\text{W/(m}^2 \text{K})$, length to
+    diameter ratio $L_{st}/R_{st}$, initial 
+    $T_{st,initial}$ and maximum temperatures $T_{st,max}$ in  $\text{K}$.
 
 -   Space heating load: degree-hour method
-    $\dot{L}={{U}_{house}}{{A}_{house}}\left( {{T}_{b}}-{{T}_{a}} \right)$
-    in $\text{Whr}$, building loss coefficient ${{U}_{house}}$
+    $\dot{L}=U_{house}A_{house}(T_{b}-T_{a})$
+    in $\text{Whr}$, building loss coefficient $U_{house}$
     $\text{W/(m}^2 \text{K})$, area of the building envelope
-    ${{A}_{house}}$ in $\text{m}^2$, balance point temperature
-    ${{T}_{b}}$ in $^{\text{0}}\text{C}$, minimum temperature to cover
-    load ${{T}_{l,min}}\ $ in $\text{K}$ and mass flow rate of the load:
-    ${{m}_{l}}$ in ${\text{kg}}/{\text{s}}$.
+    $A_{house}$ in $\text{m}^2$, balance point temperature
+    $T_{b}$ in $^{\text{0}}\text{C}$, minimum temperature to cover
+    load $T_{l,min}$ in $\text{K}$ and mass flow rate of the load:
+    $m_{l}$ in ${\text{kg}}/{\text{s}}$.
 
 -   Domestic hot water: consumption in lt per person per day at
     a temperature in $^{\text{0}}\text{C}$. Profile of the hourly consumption given as a
