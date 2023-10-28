@@ -1,7 +1,5 @@
 clearvars
 %*******************INPUTS AND VARIABLES********************%
-%Insert weather data, for TMY2 iw=1, for TMY FROM PVGSIS iw=0
-iw=0;
 %Insert type of solar thermal system, idhw=1 for domestic how water, for anything else idhw=0
 idhw=1;
 %Insert type of load, for constant load sload=0, for time dependent load sload=1
