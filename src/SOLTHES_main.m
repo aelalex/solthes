@@ -5,9 +5,9 @@ clearvars
 %If no new file is used, the default csv file is imported.
 %Filename can also be changed from here.
 if change=='N'
-    filename=fullfile(pwd, 'data/data_Athens.csv');
+    filename=fullfile(pwd, '../data/data_Athens.csv');
     %For TMY2 file: Uncomment next line to use the default filename
-    %filename=fullfile(pwd, 'data/US-NY-New-York-City-94728.tm2');
+    %filename=fullfile(pwd, '../data/US-NY-New-York-City-94728.tm2');
 end
 %Insert type of solar thermal system, idhw=1 for domestic how water, for anything else idhw=0
 idhw=1;

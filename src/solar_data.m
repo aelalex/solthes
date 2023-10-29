@@ -23,9 +23,6 @@ if strcmp(file_extension, 'csv')
     long=Weather_data.longitude;
 elseif strcmp(file_extension, 'tm2')
     %TMY2 DATA FILE READER
-    %Change file name. Example filename 'US-NY-New-York-City-94728.tm2'. 
-    %Uncomment next line to use the default filename without input from command line
-    %filename='US-NY-New-York-City-94728.tm2';
     Weather_data = read_tmy2_data(filename);
     h=Weather_data.GHI; %Wh/m^2
     hb=Weather_data.DNI; %Wh/m^2
