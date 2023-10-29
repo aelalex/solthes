@@ -1,6 +1,8 @@
-function output(f,Vec,x,tstart,tend,TST,TA,DC,DL,QU,N_A,QL)
-%Export quantities of interest in visual and text form
-%   Detailed explanation goes here
+function output(f,A_m,Vst_th,Vec,x,tstart,tend,TST,TA,DC,DL,QU,N_A,QL)
+%   Export quantities of interest in visual and text form.
+%   The data are plotted after user input since this is an educational
+%   software and the user may want to check a single plot or plot each
+%   value at a certain time. 
 
 %Do you want to plot?
 prompt='Plot some quantity of interest or end the program? plot or end:  ';
@@ -18,7 +20,7 @@ while (isequal(txt,'plot'))
         txt = input(prompt,'s');
     end
     if txt=='f'
-        %If f is a single value, then dont plot results
+        %If f is a single value, then don't plot results.
         if (size(f)>1)
             figure(1)
             plot(Vst_th,f(:,:),'LineWidth',2)
@@ -28,7 +30,9 @@ while (isequal(txt,'plot'))
             set(gca,'FontSize',15)
             ylabel('f','FontSize',24,'FontWeight','bold')
             legendCell = cellstr(num2str(A_m'));
-            legend(legendCell,'Location','southeast','FontSize',20)
+            %add to each cell element the unit
+            legend_with_unit=strcat(legendCell,' [m^2]');
+            legend(legend_with_unit,'Location','southeast','FontSize',20)
         else
             disp('Not enough values of f to make a plot!')
         end
@@ -41,7 +45,6 @@ while (isequal(txt,'plot'))
             txt = input(prompt,'s');
         end
         if isequal(txt,'TST') 
-            %Uncomment to plot Tst, Ta, Qu, Ql, n, dc,dl
             figure ('Name','Tstorage [K]')
             plot(x,TST);
             axis([tstart, tend, 300, 340]);
