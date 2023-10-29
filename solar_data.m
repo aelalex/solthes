@@ -1,4 +1,4 @@
-function [qs_year,ta_year]=solar_data(bi,gam,pr)
+function [qs_year,ta_year]=solar_data(filename,bi,gam,pr)
 % [qs_year,ta_year] = solar_data(bi,gam,pr)
 % Reading solar data, then calculating the solar irradiation on an inclined
 % plane and finally storing the solar irradiation and the ambient
@@ -8,15 +8,6 @@ function [qs_year,ta_year]=solar_data(bi,gam,pr)
 %
 % Example: [qs_year,ta_year] = solar_data(40,0,0.2)
 
-%Check for the validity of the filename
-[filename,change] = check_filename();
-%If no new file is used, the default csv file is imported.
-%Filename can be changed from here also.
-if change=='N'
-    filename=fullfile(pwd, 'data/data_Athens.csv');
-    %For TMY2 file: Uncomment next line to use the default filename
-    %filename=fullfile(pwd, 'data/US-NY-New-York-City-94728.tm2');
-end
 % Get the last three characters
 file_extension = filename(end-2:end);
 %Check if the PVGIS tmy or the tmy2 data type is used based on the file

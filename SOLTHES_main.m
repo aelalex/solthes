@@ -1,5 +1,14 @@
 clearvars
 %% *******************INPUTS AND VARIABLES********************%
+%Check for a new file name for weather data.
+[filename,change] = check_filename();
+%If no new file is used, the default csv file is imported.
+%Filename can also be changed from here.
+if change=='N'
+    filename=fullfile(pwd, 'data/data_Athens.csv');
+    %For TMY2 file: Uncomment next line to use the default filename
+    %filename=fullfile(pwd, 'data/US-NY-New-York-City-94728.tm2');
+end
 %Insert type of solar thermal system, idhw=1 for domestic how water, for anything else idhw=0
 idhw=1;
 %Insert type of load, for constant load sload=0, for time dependent load sload=1
@@ -33,11 +42,11 @@ gam=0;
 %Insert effective ground reflectance, pr=0.2 for ground NOT covered by now,%pr=0.7 for snow covered ground
 pr=0.2;
 %Load solar radation on sloped surface and temperature from Solar_data function
-[qs_year,ta_year]=solar_data(bi,gam,pr);
+[qs_year,ta_year]=solar_data(filename,bi,gam,pr);
 %COLLECTOR DATA INPUT%
 %Insert collector surface A [m^2]. Add more values of collector surface for
 %parametric analysis
-A_m=[20,25];
+A_m=[20];
 %Insert collector property ta_eff
 ta_eff =0.822 ;
 %Insert collector heat removal parameter FR
@@ -51,7 +60,7 @@ rho=1000;
 %STORAGE DATA INPUT%
 %Insert storage surface Ast [mA2] otherwise insert volume storage [m3] and length-diameter ratio of tank [m]
 %Ast=3
-Vst_th=[0.5,0.8];
+Vst_th=[0.5];
 rlndia=3;
 %Uncomment next line and insert storage capacity mst*cp {J/K} if the volume of storage is not known
 %mst =1294*1000;
