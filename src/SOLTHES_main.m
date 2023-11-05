@@ -1,5 +1,6 @@
 clearvars
 %% *******************INPUTS AND VARIABLES********************%
+disp('SOLar THErmaL SySTEmS EducaTiOnaL Software')
 %Check for a new file name for weather data.
 [filename,change] = check_filename();
 %If no new file is used, the default csv file is imported.
