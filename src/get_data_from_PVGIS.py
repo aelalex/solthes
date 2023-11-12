@@ -20,7 +20,7 @@ def data_from_PVGIS(path,url):
         print(f"Fail message? {res.text}")
 
 def main():
-    """ Main entry point for the script """
+    """ Standalone script for downloading data from PVGSIS manually and not from SOLTHES"""
     #define the parameters for the data file
     site='Volos' #Only for reference purposes
     latitude='37.98'
