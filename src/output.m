@@ -6,20 +6,20 @@ function output(f,A_m,Vst_th,Vec,x,tstart,tend,TST,TA,DC,DL,QU,N_A,QL)
 
 %Do you want to plot?
 prompt='Plot some quantity of interest or end the program? plot or end:  ';
-txt = input(prompt,'s');
-while not (isequal(txt,'plot') || isequal(txt,'end'))
+answer = input(prompt,'s');
+while not (isequal(answer,'plot') || isequal(answer,'end'))
     prompt='Please enter plot or end:  ';
-    txt = input(prompt,'s');
+    answer = input(prompt,'s');
 end
-while (isequal(txt,'plot'))
+while (isequal(answer,'plot'))
     %what to plot?
     prompt='Plot the fraction of load (f) or the transient quantities (q)?  f or q:  ';
-    txt = input(prompt,'s');
-    while not (isequal(txt,'f') || isequal(txt,'q'))
+    answer = input(prompt,'s');
+    while not (isequal(answer,'f') || isequal(answer,'q'))
         prompt='Please enter f or q:  ';
-        txt = input(prompt,'s');
+        answer = input(prompt,'s');
     end
-    if txt=='f'
+    if answer=='f'
         %If f is a single value, then don't plot results.
         if (size(f)>1)
             figure(1)
@@ -39,12 +39,12 @@ while (isequal(txt,'plot'))
     else
         %Which quantity to plot?
         prompt='Which quantity do you want to plot? Storage temperature: TST, Ambient temperature: TA, Collector switch: DC, Load switch: DL, Useful energy gain: QU, efficiency: N_A, thermal load: QL ';
-        txt = input(prompt,'s');
-        while not (isequal(txt,'TST') || isequal(txt,'TA')|| isequal(txt,'DC') || isequal(txt,'DL') || isequal(txt,'QU') || isequal(txt,'N_A') || isequal(txt,'QL'))
+        answer = input(prompt,'s');
+        while not (isequal(answer,'TST') || isequal(answer,'TA')|| isequal(answer,'DC') || isequal(answer,'DL') || isequal(answer,'QU') || isequal(answer,'N_A') || isequal(answer,'QL'))
             prompt='Please enter TST or TA or DC or DL or QU or N_A or QL:  ';
-            txt = input(prompt,'s');
+            answer = input(prompt,'s');
         end
-        if isequal(txt,'TST') 
+        if isequal(answer,'TST') 
             figure ('Name','Tstorage [K]')
             plot(x,TST);
             axis([tstart, tend, 300, 340]);
@@ -52,7 +52,7 @@ while (isequal(txt,'plot'))
             set(gca,'FontSize',15)
             ylabel('Tst(K)','FontSize',20,'FontWeight','bold');
             grid('on');
-        elseif  isequal(txt,'TA')
+        elseif  isequal(answer,'TA')
             figure ('Name','Ta [K]')
             plot(x,TA);
             axis([tstart, tend, min(TA), max(TA)]);
@@ -60,7 +60,7 @@ while (isequal(txt,'plot'))
             set(gca,'FontSize',15)
             ylabel('Ta(K)','FontSize',24,'FontWeight','bold');
             grid('on');
-        elseif isequal(txt,'DC')
+        elseif isequal(answer,'DC')
             figure ('Name','Switch collector: dc')
             plot(x,DC);
             axis([tstart, tend, 0, 1]);
@@ -68,7 +68,7 @@ while (isequal(txt,'plot'))
             ylabel('dc','FontSize',24,'FontWeight','bold');
             set(gca,'FontSize',15)
             grid('on');       
-        elseif isequal(txt,'DL')
+        elseif isequal(answer,'DL')
             figure ('Name','Switch load: dl')
             plot(x,DL);
             axis([tstart, tend, 0, 1]);
@@ -76,7 +76,7 @@ while (isequal(txt,'plot'))
             ylabel('dl','FontSize',24,'FontWeight','bold');
             set(gca,'FontSize',15)
             grid('on');      
-        elseif isequal(txt,'QU')
+        elseif isequal(answer,'QU')
             figure ('Name','Quseful(kW)')
             plot(x,QU);
             axis([tstart, tend, 0, max(QU)]);
@@ -84,7 +84,7 @@ while (isequal(txt,'plot'))
             ylabel('Qu(kW)','FontSize',24,'FontWeight','bold');
             set(gca,'FontSize',15)
             grid('on');
-        elseif isequal(txt,'N_A')
+        elseif isequal(answer,'N_A')
             figure ('Name','Efficiency(%)')
             plot(x,N_A);
             axis([tstart, tend, 0, 100]);
@@ -92,7 +92,7 @@ while (isequal(txt,'plot'))
             ylabel('n(%)','FontSize',24,'FontWeight','bold');
             set(gca,'FontSize',15)
             grid('on');
-        elseif isequal(txt,'QL')
+        elseif isequal(answer,'QL')
             figure ('Name','Qload(kW)')
             plot(x,QL);
             axis([tstart, tend, min(QL), max(QL)]);
@@ -103,21 +103,17 @@ while (isequal(txt,'plot'))
         end
     end
     prompt='Plot some other quantity or end the program? plot or end:  ';
-    txt = input(prompt,'s');
-    while  not (isequal(txt,'plot') || isequal(txt,'end'))
+    answer = input(prompt,'s');
+    while  not (isequal(answer,'plot') || isequal(answer,'end'))
         prompt='Please enter plot or end:  ';
-        txt = input(prompt,'s');
+        answer = input(prompt,'s');
     end
 end
 
 %Ask if the output file is needed in xls form
 prompt = 'Do you want to save the output file? Y or N:  ';
-txt = input(prompt,'s');
-while (txt~='Y' && txt~="N")
-    prompt='Please enter Y or N:  ';
-    txt = input(prompt,'s');
-end
-if txt=='Y'
+answer=check_response(prompt);
+if answer=='Y'
     disp('Writing file to xls format may take some time depending on the simulation hours')
     col_header={'Hour','Tfin','Tfout','Tst','Tlin','Tlout','Ta','dc','dl','Qs','Qu','Ql','Qdhw','Qst','n'};     %Row cell array (for column labels)
     xlswrite ('SOLTHES_output',Vec,'Results','B2');
