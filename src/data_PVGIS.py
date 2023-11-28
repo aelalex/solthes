@@ -27,7 +27,7 @@ def data_from_PVGIS(path,url):
 def site_data(input_str):
     """ Input string for the site data information for downloading data for PVGIS and generating the corresponding URL. 
         The input_string must have a form of "site,latitude,longitude,startyear,endyear,outputformat" with commma as a delimiter.
-        Example: from input_str to site='Volos', latitude='37.98', longitude='23.72', startyear='2005', endyear='2016', outputformat='csv'"""
+        Example: from input_str to site='Larissa', latitude='39.64', longitude='22.41', startyear='2005', endyear='2016', outputformat='csv'"""
     
     input_data=input_str.split(',')
     site=input_data[0]

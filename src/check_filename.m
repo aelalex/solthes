@@ -20,7 +20,7 @@ if answer=='Y'
         status_code=py.data_PVGIS.site_data(input_data);
         %check the status code to see if the data are downloaded properly.
         while (int64(status_code)==400)
-             prompt = 'Please enter data in correct form of, e.g., Volos,37.98,23.72,2005,2016,csv  ';
+             prompt = 'Please enter data in correct form of, e.g., Larissa,39.64,22.41,2005,2016,csv  ';
              input_data = input(prompt,'s');
              status_code=py.data_PVGIS.site_data(input_data);
         end
