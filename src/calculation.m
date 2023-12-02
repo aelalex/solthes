@@ -1,4 +1,4 @@
-function [Vec, TST, TA, QL, DC, DL, QU, N_A, f] = calculation(A, Vst, rho, c, rlndia, tstart, ta_year, tend, qs_year, U, Tst, Vec, TST, TA, QL, tr, ttot, isp, Tb, Uhouse, Ahouse, idhw, ml_u, Treq, Tsup, ta_eff, Tstmax, Fr, ml, Tlmin, Ust, DC, DL, QU, N_A)
+function [Vec, TST, TA, QL, DC, DL, QU, N_A, f, n_ave] = calculation(A, Vst, rho, c, rlndia, tstart, ta_year, tend, qs_year, U, Tst, Vec, TST, TA, QL, tr, ttot, isp, Tb, Uhouse, Ahouse, idhw, ml_u, Treq, Tsup, ta_eff, Tstmax, Fr, ml, Tlmin, Ust, DC, DL, QU, N_A)
 % [Vec, TST, TA, QL, DC, DL, QU, N_A, f] = calculation(A, Vst, rho, c, rlndia, tstart, ta_year, tend, qs_year, U, Tst, Vec, TST, TA, QL, tr, ttot, isp, Tb, Uhouse, Ahouse, idhw, ml_u, Treq, Tsup, ta_eff, Tstmax, Fr, ml, Tlmin, Ust, DC, DL, QU, N_A)
 %   
 %  Main calculation loop for the solar thermal system. Includes the
@@ -181,4 +181,5 @@ disp(fdisp)
 disp(ndisp)
 
 f=sum_dl/sum_l;
+n_ave=sum_us/sum_s;
 end

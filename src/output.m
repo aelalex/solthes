@@ -116,8 +116,8 @@ answer=check_response(prompt);
 if answer=='Y'
     disp('Writing file to xls format may take some time depending on the simulation hours')
     col_header={'Hour','Tfin','Tfout','Tst','Tlin','Tlout','Ta','dc','dl','Qs','Qu','Ql','Qdhw','Qst','n'};     %Row cell array (for column labels)
-    xlswrite ('SOLTHES_output',Vec,'Results','B2');
-    xlswrite('SOLTHES_output',col_header,'Results','B1');     %Write column header
+    xlswrite ('../SOLTHES_output',Vec,'Results','B2');
+    xlswrite('../SOLTHES_output',col_header,'Results','B1');     %Write column header
 end
 end
 
