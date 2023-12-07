@@ -14,12 +14,13 @@ def data_from_PVGIS(path,url):
         #Write data directly as it is already in a csv format.
         with open(data_filename, 'w', encoding='utf-8', newline='') as output_file:
             output_file.write(res.text)
+            print('csv file successfully stored in ',data_filename)
     else:
         print(f"Request failed with status code: {res.status_code}")
         print(f"Fail message? {res.text}")
 
 def main():
-    """ Main entry point for the script """
+    """ Standalone script for downloading data from PVGSIS manually and not from SOLTHES"""
     #define the parameters for the data file
     site='Volos' #Only for reference purposes
     latitude='37.98'

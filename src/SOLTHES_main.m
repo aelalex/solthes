@@ -127,7 +127,7 @@ for ka=1:size(A_m,2)
     A=A_m(ka);
     for kv=1:size(Vst_th,2)
         Vst=Vst_th(kv);
-        [Vec, TST, TA, QL, DC, DL, QU, N_A, fsingle] = calculation(A, Vst, rho, c, rlndia, tstart, ta_year, tend, qs_year, U, Tst, Vec, TST, TA, QL, tr, ttot, isp, Tb, Uhouse, Ahouse, idhw, ml_u, Treq, Tsup, ta_eff, Tstmax, Fr, ml, Tlmin, Ust, DC, DL, QU, N_A);
+        [Vec, TST, TA, QL, DC, DL, QU, N_A, fsingle,n_ave] = calculation(A, Vst, rho, c, rlndia, tstart, ta_year, tend, qs_year, U, Tst, Vec, TST, TA, QL, tr, ttot, isp, Tb, Uhouse, Ahouse, idhw, ml_u, Treq, Tsup, ta_eff, Tstmax, Fr, ml, Tlmin, Ust, DC, DL, QU, N_A);
         f(ka,kv)=fsingle;
     end
 end
