@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration file="C:\Users\aelal\OneDrive - ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΙΑΣ\Έγγραφα\GitHub\solthes\src\Solthes_App.prj" location="C:\Users\aelal\OneDrive - ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΙΑΣ\Έγγραφα\GitHub\solthes\src" name="Solthes_App" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="671695673" file="C:\Users\aelal\OneDrive - ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΙΑΣ\Έγγραφα\GitHub\solthes\src\Solthes_App.prj" location="C:\Users\aelal\OneDrive - ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΙΑΣ\Έγγραφα\GitHub\solthes\src" name="Solthes_App" preferred-package-location="C:\Users\aelal\OneDrive - ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΙΑΣ\Έγγραφα\GitHub\solthes\src\Solthes_App\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>Solthes_App</param.appname>
     <param.icon />
     <param.icons />
@@ -13,7 +13,7 @@
     <param.guid />
     <param.installpath.string>\Solthes_App\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
-    <param.logo />
+    <param.logo>C:\Users\aelal\Downloads\Image_solar_thermal_system.png</param.logo>
     <param.install.notes />
     <param.target.install.notes />
     <param.intermediate>${PROJECT_ROOT}\Solthes_App\for_testing</param.intermediate>
@@ -30,9 +30,9 @@
     <param.web.mcr.name>Solthes_intaller_web</param.web.mcr.name>
     <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
     <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
-    <param.windows.command.prompt>true</param.windows.command.prompt>
-    <param.create.log>false</param.create.log>
-    <param.log.file />
+    <param.windows.command.prompt>false</param.windows.command.prompt>
+    <param.create.log>true</param.create.log>
+    <param.log.file>Log</param.log.file>
     <param.native.matlab>false</param.native.matlab>
     <param.checkbox>false</param.checkbox>
     <param.example />
@@ -52,7 +52,6 @@
       <param.guid />
       <param.installpath.string />
       <param.installpath.combo />
-      <param.logo />
       <param.install.notes />
       <param.target.install.notes />
       <param.intermediate />
@@ -68,9 +67,6 @@
       <param.no.mcr />
       <param.package.mcr.name />
       <param.no.mcr.name />
-      <param.windows.command.prompt />
-      <param.create.log />
-      <param.log.file />
       <param.native.matlab />
       <param.checkbox />
       <param.example />
