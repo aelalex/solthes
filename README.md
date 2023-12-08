@@ -21,7 +21,7 @@ Furthermore, the control for the typical solar thermal system is seen in Fig. 2.
 
 In addition, a graphical interface unit (GUI) is provided with the SOLTHES software. The GUI was created with the APP designer from MATLAB software and it involves the same functionalities as the source code. The GUI version is also compiled to a standalone app in order for users with no programming experience to be able to test the program and simulate a typical solar thermal system. 
 
-A Python module for receiving the weather data through an API of the PVGIS webtool is also included. The user may easily put the latitude and longitude of the site and then the csv file with the weather data is downloaded in the data folder.
+A Python module for receiving the weather data through an API of the PVGIS webtool is also included. The user may easily put the latitude and longitude of the site and then the csv file with the weather data is used in the simulation.
 
 ![flow chart of the code](figs/Flow_chart.png)
 
